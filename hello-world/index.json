@@ -21,6 +21,6 @@
     "uimessage1": "minikube start"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "minikube"
   }
 }
