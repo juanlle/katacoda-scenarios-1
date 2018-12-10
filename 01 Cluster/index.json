@@ -2,7 +2,7 @@
   "title": "Minikube",
   "description": "Lanzar un cluster con minikube",
   "difficulty": "fácil",
-  "time": "10 minutes",
+  "time": "15 minutos",
   "details": {
     "steps": [{
       "title": "1. Comprobación de kubectl y minikube",
@@ -11,15 +11,27 @@
       "title": "2. Desplegar el clúster de minikube",
       "text": "paso2.md"
     },{
-      "title": "Paso 1 - Comprobar minikube",
-      "text": "paso1.md"
+      "title": "3. Dashboard",
+      "text": "paso3.md"
     },{
-      "title": "Paso 1 - Comprobar minikube",
-      "text": "paso1.md"
+      "title": "4. Hello Minikube 1/2",
+      "text": "paso4.md"
+    },{
+      "title": "5. Hello Minikube 2/2",
+      "text": "paso5.md"
+    },{
+      "title": "6. Habilitar addons",
+      "text": "paso6.md"
+    },{
+      "title": "7. Limpieza",
+      "text": "paso7.md"
+    },{
+      "title": "8. Parar minikube",
+      "text": "paso8.md"
     }],
     "intro": {
       "text": "intro.md",
-      "credits": "Christian Axel Schmidt Dick"
+      "credits": "Christian Axel Schmidt Dick <christianaxel.schmidt@gmail.com>"
     },
     "finish": {
       "text": "finish.md"
@@ -27,7 +39,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "minikube start"
+    "uimessage1": ""
   },
   "backend": {
     "imageid": "minikube"
