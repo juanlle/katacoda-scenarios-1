@@ -1,4 +1,4 @@
-Para acceder al Dashboard de Kubernetes, ejecutar este comando en un terminal después de haber iniciado Minikube para obtener la dirección:
+Para acceder al Dashboard de Kubernetes, ejecutar este comando en un terminal después de haber iniciado Minikube para obtener la dirección  (volver a ejecutar si la primera vez da un error):
 
 `minikube dashboard`{{execute}}
 

@@ -1,4 +1,4 @@
-Para arrancar minikube en nuestra máquina virtual hay que ejecutar (la primera vez se descargará la imagen de minikube, por lo que tardará un rato):
+Para arrancar minikube en nuestra máquina virtual hay que ejecutar:
 
 `minikube start`{{execute}}
 
