@@ -1,16 +1,16 @@
 {
-  "title": "Hello World Scenario",
-  "description": "Your First Scenario",
-  "difficulty": "beginner",
-  "time": "2 minutes",
+  "title": "Minikube",
+  "description": "Lanzar un cluster con minikube",
+  "difficulty": "fácil",
+  "time": "10 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Run Command",
-      "text": "step1.md"
+      "title": "Paso 1 - Comprobar minikube",
+      "text": "paso1.md"
     }],
     "intro": {
       "text": "intro.md",
-      "credits": ""
+      "credits": "Christian Axel Schmidt Dick"
     },
     "finish": {
       "text": "finish.md"
@@ -18,9 +18,9 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uimessage1": "minikube start"
   },
   "backend": {
-    "imageid": "bash"
+    "imageid": "kubernetes"
   }
 }
