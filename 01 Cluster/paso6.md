@@ -1,5 +1,3 @@
-### 6. Habilitar addons
-
 Minikube posee una lista de addons que pueden ser habilitados, deshabilitados y ejecutados en el entorno local de Kubernetes.
 
 Para mostrar la lista de los addons soportados:

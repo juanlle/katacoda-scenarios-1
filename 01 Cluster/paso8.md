@@ -1,5 +1,3 @@
-### 8. Parar minikube
-
 Para parar el clúster de minikube debemos ejecutar
 
 `minikube stop`{{execute}}

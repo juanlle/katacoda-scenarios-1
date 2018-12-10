@@ -1,5 +1,3 @@
-### 5. Hello Minikube 2/2
-
 Para exponer el Pod al exterior (internet) usando el comando _kubectl expose_:
 
 `kubectl expose deployment hello-node --type=LoadBalancer`{{execute}}

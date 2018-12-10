@@ -1,5 +1,3 @@
-### 4. Hello Minikube
-
 Ahora usaremos el comando `kubectl run`  para realizar un despliegue sencillo con un único pod.
 
 `kubectl run hello-node --image=gcr.io/hello-minikube-zero-install/hello-node --port=8080`{{execute}}
