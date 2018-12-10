@@ -5,6 +5,15 @@
   "time": "10 minutes",
   "details": {
     "steps": [{
+      "title": "1. Comprobación de kubectl y minikube",
+      "text": "paso1.md"
+    },{
+      "title": "2. Desplegar el clúster de minikube",
+      "text": "paso2.md"
+    },{
+      "title": "Paso 1 - Comprobar minikube",
+      "text": "paso1.md"
+    },{
       "title": "Paso 1 - Comprobar minikube",
       "text": "paso1.md"
     }],
