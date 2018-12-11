@@ -9,29 +9,12 @@
       "title": "1. Crear un configmap y un pod que acceda a él",
       "text": "paso1.md"
     },{
-      "title": "2. Desplegar el clúster de minikube",
+      "title": "2. Crear un secret y un pod que acceda a él",
       "text": "paso2.md"
-    },{
-      "title": "3. Dashboard",
-      "text": "paso3.md"
-    },{
-      "title": "4. Hello Minikube 1/2",
-      "text": "paso4.md"
-    },{
-      "title": "5. Hello Minikube 2/2",
-      "text": "paso5.md"
-    },{
-      "title": "6. Habilitar addons",
-      "text": "paso6.md"
-    },{
-      "title": "7. Limpieza",
-      "text": "paso7.md"
-    },{
-      "title": "8. Parar minikube",
-      "text": "paso8.md"
     }],
     "intro": {
       "text": "intro.md",
+      "courseData": "start.sh",
       "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
     },
     "finish": {
@@ -40,9 +23,23 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": ""
+    "uimessage1": "\\u001b[32mEsta es tu Consola Interactiva.\\r\\nIniciando Minikube\\u001b[m\\r\\n"
   },
   "backend": {
     "imageid": "minikube"
+  },
+  "assets": {
+    "client": [
+      {
+        "file": "secret.yml",
+        "target": "~/"
+      }
+    ],
+    "host01": [
+      {
+        "file": "configmap.yml",
+        "target": "~/"
+      }
+    ]
   }
 }
