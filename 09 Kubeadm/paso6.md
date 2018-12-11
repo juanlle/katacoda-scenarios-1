@@ -2,7 +2,7 @@ Como hemos visto anteriormente, Kubernetes tiene una interfaz de usuario web o `
 
 ### Tarea
 
-Desplegar el yaml del dashboard con el comando `kubectl apply -f dashboard.yaml`{{execute HOST1}}
+Desplegar el yaml del dashboard con el comando `kubectl apply -f dashboard2.yaml`{{execute HOST1}}
 
 El panel de control se despliega en el espacio de nombres o _namespace_ `kube-system`. Para ver el estado del despliegue `kubectl get pods -n kube-system`{{execute HOST1}}
 
@@ -37,7 +37,7 @@ Una vez que se ha creado la Cuenta de servicio (_ServiceAccount_), para obtener 
 
 `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`{{execute HOST1}}
 
-AL desplegar el _Dashboard_, se usaron IPs externas para vincular el servicio con el puerto 8443. Esto hace que el panel de control esté disponible fuera del clúster y se pueda ver en https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/
+AL desplegar el _Dashboard_, se usaron IPs externas para vincular el servicio con el puerto 30000. Esto hace que el panel de control esté disponible fuera del clúster y se pueda ver en https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
 
 Utilice el token de _admin-user_ para acceder al panel de control.
 
