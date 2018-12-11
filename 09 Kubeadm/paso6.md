@@ -29,8 +29,7 @@ subjects:
   name: admin-user
   namespace: kube-system
 EOF
-```
-{{execute HOST1}}
+```{{execute HOST1}}
 
 Esto significa que pueden controlar todos los aspectos de Kubernetes. Con _ClusterRoleBinding_ y _RBAC_, se pueden definir diferentes niveles de permisos según los requisitos de seguridad. Puede encontrar más información sobre cómo crear un usuario para el _Dashboard_ en la [documentación del Dashboard](https://github.com/kubernetes/dashboard/wiki/Creating-sample-user).
 
