@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo It works!
+echo Iniciando Minikube
 minikube start

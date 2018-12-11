@@ -23,7 +23,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "Esta es tu Consola Interactiva. Iniciando Minikube"
+    "uimessage1": "Esta es tu Consola Interactiva."
   },
   "backend": {
     "imageid": "minikube"
