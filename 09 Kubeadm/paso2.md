@@ -4,7 +4,7 @@ Una vez que el Maestro se ha inicializado, los nodos adicionales pueden unirse a
 
 En el segundo nodo, ejecute el comando para unirse al clúster que proporciona la dirección IP del nodo maestro.
 
-`kubeadm join --discovery-token-unsafe-skip-ca-verification --token=102952.1a7dd4cc8d1f4cc5 172.17.0.60:6443`{{execute HOST2}}
+`kubeadm join --discovery-token-unsafe-skip-ca-verification --token=102952.1a7dd4cc8d1f4cc5 [[HOST1]]:6443`{{execute HOST2}}
 
 Este es el mismo comando que se muestra por terminal justo después de que se haya inicializado el Maestro.
 

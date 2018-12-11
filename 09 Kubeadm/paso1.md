@@ -4,6 +4,8 @@ La primera etapa de inicialización del clúster es iniciar el nodo maestro. El 
 
 ### Tarea
 
+[[HOST1]]
+
 El siguiente comando inicializará el clúster con un token conocido para simplificar los siguientes pasos.
 
 `kubeadm init --token=102952.1a7dd4cc8d1f4cc5 --kubernetes-version $(kubeadm version -o short)`{{execute HOST1}}
