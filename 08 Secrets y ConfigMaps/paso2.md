@@ -60,7 +60,7 @@ y comprobamos que ha arrancado correctamente
 
 y comprobamos que el archivo creado a partir del secret existe en el pod
 
-`kubectl exec -it myapp-pod cat /tmp/newpass/password.txt
+`kubectl exec -it myapp-pod cat /tmp/newpass/password.txt`{{execute}}
 
 Salida del terminal:
 ```

@@ -2,5 +2,5 @@
 
 echo Iniciando Minikube
 minikube start
-sleep 30
+sleep 5
 minikube dashboard
