@@ -1,0 +1,52 @@
+{
+  "title": "Pods",
+  "icon": "fa-kubernetes",
+  "description": "Despliegue de Pods y sus particularidades",
+  "difficulty": "intermedio",
+  "time": "30 minutos",
+  "details": {
+    "steps": [{
+      "title": "1. Crear un pod sencillo",
+      "text": "paso1.md"
+    },{
+      "title": "2. Pod con sondas de estado",
+      "text": "paso2.md"
+    },{
+      "title": "3. Sondas HTTP",
+      "text": "paso3.md"
+    },{
+      "title": "4. Sondas TCP",
+      "text": "paso4.md"
+    },{
+      "title": "5. Init Containers",
+      "text": "paso5.md"
+    }],
+    "assets": {
+      "host01": [
+        {"file": "pod1.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "pod2.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "pod3.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "pod4.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "pod5.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "service.yaml", "target": "~/", "chmod": "+x"}
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "code": "start.sh",
+      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 30000}],
+    "uimessage1": "Esta es tu Consola Interactiva."
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}

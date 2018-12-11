@@ -8,4 +8,4 @@ En el segundo nodo, ejecute el comando para unirse al clúster que proporciona l
 
 Este es el mismo comando que se muestra por terminal justo después de que se haya inicializado el Maestro.
 
-La etiqueta `--discovery-token-unsafe-skip-ca-check` se utiliza para omitir la verificación de _Discovery Token_. Dado que este token se genera dinámicamente, no podríamos incluirlo en los pasos. Cuando esté en producción, use el token proporcionado por kubeadm init.
+La etiqueta `--discovery-token-unsafe-skip-ca-verification` se utiliza para omitir la verificación de _Discovery Token_. Dado que este token se genera dinámicamente, no podríamos incluirlo en los pasos. Cuando esté en producción, use el token proporcionado por `kubeadm init`.

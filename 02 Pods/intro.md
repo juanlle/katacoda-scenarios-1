@@ -1,0 +1,1 @@
+En este ejercicio crearemos varios tipos de pods y veremos sus particularidades.
