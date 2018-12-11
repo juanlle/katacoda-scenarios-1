@@ -12,6 +12,11 @@
       "title": "2. Crear un secret y un pod que acceda a él",
       "text": "paso2.md"
     }],
+    "assets": {
+      "host01": [
+        {"file": "pod.yaml", "target": "~/", "chmod": "+x"}
+      ]
+    },
     "intro": {
       "text": "intro.md",
       "code": "start.sh",
@@ -23,6 +28,8 @@
   },
   "environment": {
     "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 30000}],
     "uimessage1": "Esta es tu Consola Interactiva."
   },
   "backend": {
