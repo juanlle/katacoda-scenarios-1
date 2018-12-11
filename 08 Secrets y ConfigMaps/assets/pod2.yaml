@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: myapp-container
+      image: centos:7
+      command: ['sh', '-c', 'echo I am ready && sleep 3600']
+      volumeMounts:
+        - name: passvol
+          mountPath: "/tmp/newpass"
+          readOnly: true
+  volumes:
+    - name: passvol
+      secret:
+        secretName: newpass

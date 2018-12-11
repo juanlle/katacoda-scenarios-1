@@ -25,7 +25,7 @@ All you need is Love!
 Events: <none>
 ```
 
-Ya podemos crear un `pod.yaml` con el siguiente contenido:
+Ya podemos crear un `pod1.yaml` con el siguiente contenido:
 
 ```
 apiVersion: v1
@@ -50,7 +50,7 @@ spec:
 
 desplegamos el pod que acabamos de crear:
 
-`kubectl create -f pod.yaml`{{execute}}
+`kubectl create -f pod1.yaml`{{execute}}
 
 y comprobamos que la variable de entorno creada a partir del configmap existe en el pod
 
@@ -62,4 +62,4 @@ ORANGE=All you need is Love!
 
 Ya podemos eliminar el pod:
 
-`kubectl delete -f pod.yaml`{{execute}}
+`kubectl delete -f pod1.yaml`{{execute}}
