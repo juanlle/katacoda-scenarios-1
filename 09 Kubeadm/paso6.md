@@ -8,7 +8,8 @@ El panel de control se despliega en el espacio de nombres o _namespace_ `kube-sy
 
 Se requiere un _ServiceAccount_ para iniciar sesión. Se utiliza un _ClusterRoleBinding_ para asignar al nuevo _ServiceAccount_ (admin-user) el rol de cluster-admin en el clúster.
 
-`cat <<EOF | kubectl create -f - 
+```
+cat <<EOF | kubectl create -f - 
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -28,7 +29,8 @@ subjects:
   name: admin-user
   namespace: kube-system
 EOF
-`{{execute HOST1}}
+```
+{{execute HOST1}}
 
 Esto significa que pueden controlar todos los aspectos de Kubernetes. Con _ClusterRoleBinding_ y _RBAC_, se pueden definir diferentes niveles de permisos según los requisitos de seguridad. Puede encontrar más información sobre cómo crear un usuario para el _Dashboard_ en la [documentación del Dashboard](https://github.com/kubernetes/dashboard/wiki/Creating-sample-user).
 
@@ -36,7 +38,7 @@ Una vez que se ha creado la Cuenta de servicio (_ServiceAccount_), para obtener 
 
 `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`{{execute HOST1}}
 
-Cuando se desplegó el tablero, se usaron IPs externas para vincular el servicio con el puerto 8443. Esto hace que el tablero esté disponible fuera del clúster y se pueda ver en https://2886795349-8443-frugo04.environments.katacoda.com/
+Cuando se desplegó el tablero, se usaron IPs externas para vincular el servicio con el puerto 8443. Esto hace que el tablero esté disponible fuera del clúster y se pueda ver en https://2886795319-8443-cykoria01.environments.katacoda.com/
 
 Utilice el token de _admin-user_ para acceder al panel de control.
 
