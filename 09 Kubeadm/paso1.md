@@ -13,5 +13,5 @@ En producción, se recomienda excluir el token, ya que Kubeadm generará uno de 
 Para administrar el clúster Kubernetes, se requieren la configuración del cliente y los certificados. Esta configuración se crea cuando kubeadm inicializa el clúster. El comando copia la configuración en el directorio de inicio del usuario y establece la variable de entorno para su uso con el CLI.
 
 `sudo cp /etc/kubernetes/admin.conf $HOME/
- sudo chown $(id -u):$(id -g) $HOME/admin.conf
- export KUBECONFIG=$HOME/admin.conf`{{execute HOST1}}
+sudo chown $(id -u):$(id -g) $HOME/admin.conf
+export KUBECONFIG=$HOME/admin.conf`{{execute HOST1}}
