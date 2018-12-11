@@ -38,7 +38,7 @@ Una vez que se ha creado la Cuenta de servicio (_ServiceAccount_), para obtener 
 
 `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`{{execute HOST1}}
 
-Cuando se desplegó el tablero, se usaron IPs externas para vincular el servicio con el puerto 8443. Esto hace que el tablero esté disponible fuera del clúster y se pueda ver en https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/
+AL desplegar el _Dashboard_, se usaron IPs externas para vincular el servicio con el puerto 8443. Esto hace que el tablero esté disponible fuera del clúster y se pueda ver en https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/
 
 Utilice el token de _admin-user_ para acceder al panel de control.
 
