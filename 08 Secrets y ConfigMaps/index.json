@@ -7,14 +7,15 @@
   "details": {
     "steps": [{
       "title": "1. Crear un configmap y un pod que acceda a él",
+      "courseData": "start.sh",
       "text": "paso1.md"
     },{
       "title": "2. Crear un secret y un pod que acceda a él",
+      "courseData": "start.sh",
       "text": "paso2.md"
     }],
     "intro": {
       "text": "intro.md",
-      "courseData": "start.sh",
       "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
     },
     "finish": {
@@ -23,23 +24,9 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\\u001b[32mEsta es tu Consola Interactiva.\\r\\nIniciando Minikube\\u001b[m\\r\\n"
+    "uimessage1": "Esta es tu Consola Interactiva. Iniciando Minikube"
   },
   "backend": {
     "imageid": "minikube"
-  },
-  "assets": {
-    "client": [
-      {
-        "file": "secret.yml",
-        "target": "~/"
-      }
-    ],
-    "host01": [
-      {
-        "file": "configmap.yml",
-        "target": "~/"
-      }
-    ]
   }
 }
