@@ -1,4 +1,4 @@
-Una vez que el Maestro se ha inicializado, los nodos adicionales pueden unirse al clúster siempre que tengan el token correcto. Los tokens se pueden administrar mediante `kubeadm token`, por ejemplo, `kubeadm token list`{execute HOST1}.
+Una vez que el Maestro se ha inicializado, los nodos adicionales pueden unirse al clúster siempre que tengan el token correcto. Los tokens se pueden administrar mediante `kubeadm token`, por ejemplo, `kubeadm token list`{{execute HOST1}}.
 
 ### Tarea
 

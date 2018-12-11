@@ -15,8 +15,26 @@
       {
         "title": "3. Ver Nodos",
         "text": "paso3.md"
+      },
+      {
+        "title": "4. Implementar interfaz de red de contenedor (CNI)",
+        "text": "paso4.md"
+      },
+      {
+        "title": "5. Desplegar un Pod",
+        "text": "paso5.md"
+      },
+      {
+        "title": "6. Desplegar el Dashboard",
+        "text": "paso6.md"
       }
     ],
+    "assets": {
+      "host01": [
+        {"file": "weave-kube.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "dashboard.yaml", "target": "~/", "chmod": "+x"}
+      ]
+    },
     "intro": {
       "text": "intro.md",
       "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
@@ -26,7 +44,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal"
+    "uilayout": "terminal-terminal",
+    "uimessage1": "Esta es tu Consola Interactiva."
   },
   "backend": {
     "imageid": "kubernetes-cluster"
