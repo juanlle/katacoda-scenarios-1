@@ -1,20 +1,20 @@
 {
   "title": "Crear un cluster de kubernetes con kubeadm",
   "icon": "fa-kubernetes",
-  "description": "Como crear un cluster de kubernetes con kubeadm",
+  "description": "Como crear un cluster multi-nodo de kubernetes con kubeadm",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "1. Inicializar el Master",
+        "text": "paso1.md"
       },
       {
-        "title": "Step 2",
-        "text": "step2.md"
+        "title": "2. Unirse al Clúster",
+        "text": "paso2.md"
       },
       {
-        "title": "Step 3",
-        "text": "step3.md"
+        "title": "3. Ver Nodos",
+        "text": "paso3.md"
       }
     ],
     "intro": {
