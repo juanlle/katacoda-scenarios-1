@@ -1,12 +1,12 @@
 {
-  "title": "Minikube",
+  "title": "Secrets y ConfigMaps",
   "icon": "fa-kubernetes",
-  "description": "Lanzar un cluster con minikube",
-  "difficulty": "fácil",
+  "description": "Creación y uso de Secrets y ConfigMaps",
+  "difficulty": "intermedio",
   "time": "15 minutos",
   "details": {
     "steps": [{
-      "title": "1. Comprobación de kubectl y minikube",
+      "title": "1. Crear un configmap y un pod que acceda a él",
       "text": "paso1.md"
     },{
       "title": "2. Desplegar el clúster de minikube",

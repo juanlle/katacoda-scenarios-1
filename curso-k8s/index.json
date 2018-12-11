@@ -1,7 +1,7 @@
 {
-  "title": "Crear un cluster de kubernetes con kubeadm",
+  "title": "Curso Kubernetes",
+  "description": "Curso de iniciación a Kubernetes",
   "icon": "fa-kubernetes",
-  "description": "Como crear un cluster de kubernetes con kubeadm",
   "details": {
     "steps": [
       {
@@ -25,9 +25,9 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster"
+    "imageid": "kubernetes"
   }
 }
