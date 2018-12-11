@@ -4,7 +4,7 @@ Ahora ya tenemos el clúster inicializado. El nodo _Master_ administrará el cl�
 
 La CLI de Kubernetes, conocida como kubectl, ya puede usar la configuración para acceder al clúster. Por ejemplo, el siguiente comando devolverá los dos nodos de nuestro clúster.
 
-`kubectl get nodes`{execute HOST1}
+`kubectl get nodes`{{execute HOST1}}
 
 **En este punto, los nodos aun no estarán listos.**
 

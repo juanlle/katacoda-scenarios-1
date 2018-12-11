@@ -6,7 +6,7 @@ La primera etapa de inicialización del clúster es iniciar el nodo maestro. El 
 
 El siguiente comando inicializará el clúster con un token conocido para simplificar los siguientes pasos.
 
-`kubeadm init --token=102952.1a7dd4cc8d1f4cc5 --kubernetes-version $(kubeadm version -o short)`{execute HOST1}
+`kubeadm init --token=102952.1a7dd4cc8d1f4cc5 --kubernetes-version $(kubeadm version -o short)`{{execute HOST1}}
 
 En producción, se recomienda excluir el token, ya que Kubeadm generará uno de forma automática.
 
@@ -14,4 +14,4 @@ Para administrar el clúster Kubernetes, se requieren la configuración del clie
 
 `sudo cp /etc/kubernetes/admin.conf $HOME/
  sudo chown $(id -u):$(id -g) $HOME/admin.conf
- export KUBECONFIG=$HOME/admin.conf`{execute HOST1}
+ export KUBECONFIG=$HOME/admin.conf`{{execute HOST1}}
