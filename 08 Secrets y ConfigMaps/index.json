@@ -7,15 +7,14 @@
   "details": {
     "steps": [{
       "title": "1. Crear un configmap y un pod que acceda a él",
-      "courseData": "start.sh",
       "text": "paso1.md"
     },{
       "title": "2. Crear un secret y un pod que acceda a él",
-      "courseData": "start.sh",
       "text": "paso2.md"
     }],
     "intro": {
       "text": "intro.md",
+      "courseData": "start.sh",
       "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
     },
     "finish": {
