@@ -22,7 +22,7 @@ A continuación podemos apreciar cómo la estructura de las URL de una aplicaci�
     - backend:
         serviceName: webapp3-svc
         servicePort: 80
-```
+```{{code}}
 
 ### Tarea
 
