@@ -2,6 +2,8 @@
   "title": "Crear un cluster de kubernetes con kubeadm",
   "icon": "fa-kubernetes",
   "description": "Como crear un cluster multi-nodo de kubernetes con kubeadm",
+  "difficulty": "intermedio",
+  "time": "15 minutos",
   "details": {
     "steps": [
       {

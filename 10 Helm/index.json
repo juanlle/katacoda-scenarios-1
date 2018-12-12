@@ -1,6 +1,8 @@
 {
     "title": "Gestor de Paquetes Helm",
     "icon": "fa-kubernetes",
+    "difficulty": "intermedio",
+    "time": "15 minutos",
     "description": "Como desplegar un cluster Redis a través del gestor de paquetes Helm",
     "details": {
         "steps": [
