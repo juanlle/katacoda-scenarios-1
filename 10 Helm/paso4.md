@@ -13,7 +13,7 @@ Redis necesita que le otorguemos los permisos de escritura.
 
 Una vez completado, su estado cambiará a _running_. Ahora tendrás un clúster Redis corriendo sobre Kubernetes.
 
-`kubectl all`{{execute}}
+`kubectl get all`{{execute}}
 
 Al despliegue de _Helm_ se le podría dar un nombre más amigable, como:
 
