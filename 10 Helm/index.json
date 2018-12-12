@@ -24,6 +24,11 @@
                 "text": "paso4.md"
             }
         ],
+        "assets": {
+            "host01": [
+                {"file": "pv.yaml", "target": "~/", "chmod": "+x"}
+            ]
+        },
         "intro": {
             "text": "intro.md",
             "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"

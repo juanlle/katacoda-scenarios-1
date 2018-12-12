@@ -31,7 +31,7 @@
     "uilayout": "terminal",
     "showdashboard": true,
     "dashboards": [{"name": "Dashboard", "port": 30000}],
-    "uimessage1": "Esta es tu Consola Interactiva."
+    "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
   },
   "backend": {
     "imageid": "minikube"

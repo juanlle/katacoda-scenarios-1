@@ -1,7 +1,7 @@
 Helm es un binario único que gestiona el despliegue de _Charts_ en Kubernetes. Un _Chart_ es una unidad empaquetada de software para kubernetes. Se puede descargar en https://github.com/kubernetes/helm/releases
 
-`curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.3.0-linux-amd64.tar.gz
-tar -xvf helm-v2.3.0-linux-amd64.tar.gz
+`curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
+tar -xvf helm-v2.8.2-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/`{{execute}}
 
 
