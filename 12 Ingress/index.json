@@ -1,0 +1,64 @@
+{
+  "pathwayTitle": "Ingress",
+  "title": "Enrutamiento con Ingress",
+  "icon": "fa-kubernetes",
+  "difficulty": "intermedio",
+  "time": "10-15 minutos",
+  "description": "Aprenda cómo definir el enrutamiento Ingress basado en el host y la ruta",
+  "details": {
+    "steps": [
+      {
+        "title": "1. Creación del despliegue",
+        "code": "set-env.sh",
+        "text": "paso1.md"
+      },
+      {
+        "title": "2. Despliegue del controlador Ingress",
+        "text": "paso2.md"
+      },
+      {
+        "title": "3. Despliegue de reglas Ingress",
+        "text": "paso3.md"
+      },
+      {
+        "title": "4. Comprobar los resultados",
+        "text": "paso4.md"
+      }
+    ],
+    "assets": {
+      "host01": [
+        {
+          "file": "deployment.yaml",
+          "target": "~/",
+          "chmod": "+x"
+        },
+        {
+          "file": "ingress.yaml",
+          "target": "~/",
+          "chmod": "+x"
+        },
+        {
+          "file": "ingress-rules.yaml",
+          "target": "~/",
+          "chmod": "+x"
+        }
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "courseData": "courseBase.sh",
+      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+  },
+  "backend": {
+    "port": 8080,
+    "imageid": "kubernetes"
+  }
+}
