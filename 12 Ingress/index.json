@@ -47,7 +47,6 @@
     "intro": {
       "text": "intro.md",
       "courseData": "courseBase.sh",
-      "code": "start.sh",
       "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
     },
     "finish": {
