@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 mkdir /mnt/data1
 mkdir /mnt/data2
 mkdir /mnt/data3
