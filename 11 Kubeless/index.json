@@ -2,7 +2,7 @@
   "pathwayTitle": "Kubeless",
   "icon": "fa-kubernetes",
   "title": "Primeros pasos con Kubeless",
-  "description": "Aprenda cómo implementar funciones sin servidor con Kubeless",
+  "description": "Aprenda cómo implementar funciones serverless con Kubeless",
   "difficulty": "intermedio",
   "time": "15 minutos",
   "details": {
