@@ -1,0 +1,32 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Area Recreativa de Kubernetes",
+    "description": "Aquí puede usar Kubernetes alojado en un entorno interactivo y aislado",
+    "details": {
+        "steps": [
+            {
+                "code": "set-env.sh",
+                "text": "paso1.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "courseBase.sh",
+            "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-terminal",
+        "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+    },
+    "backend": {
+        "port": 8080,
+        "imageid": "kubernetes-cluster-running"
+    }
+}
