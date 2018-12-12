@@ -2,7 +2,7 @@ Como hemos visto anteriormente, Kubernetes tiene una interfaz de usuario web o `
 
 ### Tarea
 
-Desplegar el yaml del dashboard con el comando `kubectl apply -f dashboard2.yaml`{{execute HOST1}}
+Desplegar el yaml del dashboard con el comando `kubectl apply -f dashboard.yaml`{{execute HOST1}}
 
 El panel de control se despliega en el espacio de nombres o _namespace_ `kube-system`. Para ver el estado del despliegue `kubectl get pods -n kube-system`{{execute HOST1}}
 

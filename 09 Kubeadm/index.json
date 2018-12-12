@@ -32,8 +32,7 @@
     "assets": {
       "host01": [
         {"file": "weave-kube.yaml", "target": "~/", "chmod": "+x"},
-        {"file": "dashboard.yaml", "target": "~/", "chmod": "+x"},
-        {"file": "dashboard2.yaml", "target": "~/", "chmod": "+x"}
+        {"file": "dashboard.yaml", "target": "~/", "chmod": "+x"}
       ]
     },
     "intro": {

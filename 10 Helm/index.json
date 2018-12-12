@@ -1,0 +1,41 @@
+{
+    "title": "Gestor de Paquetes Helm",
+    "icon": "fa-kubernetes",
+    "description": "Como desplegar un cluster Redis a través del gestor de paquetes Helm",
+    "details": {
+        "steps": [
+            {
+                "title": "1. Instalación de Helm",
+                "code": "set-env.sh",
+                "text": "paso1.md"
+            },
+            {
+                "title": "2. Búsqueda de un Chart",
+                "text": "paso2.md"
+            },
+            {
+                "title": "3. Desplegar Redis",
+                "text": "paso3.md"
+            },
+            {
+                "title": "4. Comprobar los resultados",
+                "text": "paso4.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+    },
+    "backend": {
+        "port": 8080,
+        "imageid": "kubernetes-cluster-running"
+    }
+}
