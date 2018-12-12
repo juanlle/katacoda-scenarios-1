@@ -1,0 +1,60 @@
+{
+  "pathwayTitle": "Kubeless",
+  "icon": "fa-kubernetes",
+  "title": "Primeros pasos con Kubeless",
+  "description": "Aprenda cómo implementar funciones sin servidor con Kubeless",
+  "difficulty": "intermedio",
+  "time": "15 minutos",
+  "details": {
+    "steps": [
+      {
+        "title": "1. Instalación de Kubeless",
+        "text": "paso1.md"
+      },
+      {
+        "title": "2. Despliegue de una función Python",
+        "text": "paso2.md"
+      },
+      {
+        "title": "3. Llamada a la función",
+        "text": "paso3.md"
+      },
+      {
+        "title": "4. Comprobar los logs, ver y actualizar una función",
+        "text": "paso4.md"
+      },
+      {
+        "title": "5. Creación de una función node.js",
+        "text": "paso5.md"
+      },
+      {
+        "title": "6. Eliminación de una función",
+        "text": "paso6.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "courseBase.sh",
+      "code": "set-env.sh",
+      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*",
+          "target": "/root"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubeless"
+  }
+}
