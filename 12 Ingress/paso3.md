@@ -8,7 +8,7 @@ Las reglas se aplican a las solicitudes para el host _my.kubernetes.example_. Do
 
 A continuación podemos apreciar cómo la estructura de las URL de una aplicación puede comportarse de manera independiente a cómo se despliegan las aplicaciones.
 
-<pre class="yaml">
+<pre class="file">
 - host: my.kubernetes.example
   http:
     paths:
