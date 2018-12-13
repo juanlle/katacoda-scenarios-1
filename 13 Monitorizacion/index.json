@@ -43,7 +43,7 @@
   "environment": {
     "uilayout": "terminal",
     "showdashboard": true,
-    "dashboards": [{"name": "Prometheus", "port": 9090}, {"name": "Grafana", "port": 3000}, {"name": "Grafana", "port": 9093}],
+    "dashboards": [{"name": "Prometheus", "port": 9090}, {"name": "Grafana", "port": 3000}, {"name": "Alert Manager", "port": 9093}],
     "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
   },
   "backend": {

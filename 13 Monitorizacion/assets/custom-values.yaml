@@ -1,8 +1,9 @@
 # Dependiendo de la solución DNS que hayamos instalado en nuestro clúster habilitaremos el exportador correspondiente
-coreDns:
-  enabled: false
-kubeDns:
-  enabled: true
+#coreDns:
+#  enabled: false
+#kubeDns:
+#  enabled: true
+#cat > custom-values.yaml <<EOF
 alertmanager:
   service:
     type: LoadBalancer
@@ -33,3 +34,4 @@ grafana:
     enabled: true
     accessModes: ["ReadWriteOnce"]
     size: 1Gi
+#EOF
