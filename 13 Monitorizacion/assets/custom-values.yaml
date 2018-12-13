@@ -7,31 +7,34 @@
 alertmanager:
   service:
     type: LoadBalancer
-  alertmanagerSpec:
-    storage:
-      volumeClaimTemplate:
-        spec:
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 1Gi
+#  alertmanagerSpec:
+#    storage:
+#      volumeClaimTemplate:
+#        spec:
+#          accessModes: ["ReadWriteOnce"]
+#          resources:
+#            requests:
+#              storage: 1Gi
+
 prometheus:
   service:
     type: LoadBalancer
-  prometheusSpec:
-    storage:
-      volumeClaimTemplate:
-        spec:
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 1Gi
+#  prometheusSpec:
+#    storage:
+#      volumeClaimTemplate:
+#        spec:
+#          accessModes: ["ReadWriteOnce"]
+#          resources:
+#            requests:
+#              storage: 1Gi
+
 grafana:
-  adminPassword: "AllYouNeedIsLove"
+#  adminPassword: "AllYouNeedIsLove"
   service:
     type: LoadBalancer
-  persistence:
-    enabled: true
-    accessModes: ["ReadWriteOnce"]
-    size: 1Gi
+#  persistence:
+#    enabled: true
+#    accessModes: ["ReadWriteOnce"]
+#    size: 1Gi
+
 #EOF
