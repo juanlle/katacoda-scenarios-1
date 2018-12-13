@@ -1,5 +1,26 @@
-En este caso usaremos el mismo pod creado previamente, y un nuevo servicio `service2.yaml` con el contenido:
+Vamos un nuevo pod con el contenido:
 
+<pre class="file">
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.7.9
+      ports:
+      # Ahora los nombramos
+      - name: http
+        hostPort: 80
+        containerPort: 80
+      - name: https
+        hostPort: 443
+        containerPort: 80
+</pre>
+y otro servicio:
 <pre class="file">
 kind: Service
 apiVersion: v1
@@ -8,32 +29,37 @@ metadata:
 spec:
   selector:
     app: nginx # Pod al que enrutará este servicio
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: http
     protocol: TCP
-    port: 8080
-    targetPort: 80
-    nodePort: 30080
+    port: 80
+    targetPort: http # nombre del puerto en el pod
+  - name: https
+    protocol: TCP
+    port: 443
+    targetPort: https
 </pre>
-Ahora desplegamos el servicio que acabamos de crear:
+desplegamos ambos objetos:
+```
+kubectl apply -f service3.yaml -f pod2.yaml
+```{{execute}}
+Comprobamos lo que acabamos de desplegar:
+```
+kubectl get svc && kubectl get pod
+```{{execute}}
+De nuevo accedemos al servicio `nginx-service` a traves de su `CLUSTER_IP` y los dos puertos definidos en el servicio con:
+```
+curl [[HOST_IP]]:80
+curl [[HOST_IP]]:443
+```{{execute}}
+Para exponer los puntos de acceso `ENDPOINTS` en minikube, ejecutar el comando:
+```
+minikube service nginx-service
+```{{execute}}
+Y tendremos acceso desde el exterior. 
 
+Ya podemos limpiar nuestro cluster:
 ```
-kubectl apply -f service2.yaml
-```{{execute}}
-Comprobamos el servicio que acabamos de desplegar:
-```
-kubectl get svc
-```{{execute}}
-Anotamos los dos puertos de nuestro servicio. De nuevo accedemos al servicio `nginx-service` a traves de su `CLUSTER_IP` y puerto con:
-```
-curl [[HOST_IP]]:30080
-```{{execute}}
-Ahora obtenemos la dirección IP del cluster con el comando:
-```
-kubectl cluster-info
-```{{execute}}
-Si probamos acceder a la IP que acabamos de obtener a través del segundo puerto de nuestro servicio, veremos que también accedemos al pod:
-```
-curl [[HOST_IP]]:30080
+kubectl delete -f service3.yaml -f pod2.yaml
 ```{{execute}}

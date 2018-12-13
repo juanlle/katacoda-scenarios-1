@@ -1,4 +1,4 @@
-En este caso necesitaremos crear un pod además del servicio. Un archivo `pod.yaml` con el siguiente contenido:
+En este caso necesitaremos crear un pod además del servicio. Un archivo `pod1.yaml` con el siguiente contenido:
 
 <pre class="file">
 apiVersion: v1
@@ -32,7 +32,7 @@ spec:
 Ahora desplegamos el pod y el servicio que acabamos de mostrar:
 
 ```
-kubectl create -f pod.yaml -f service1.yaml
+kubectl create -f pod1.yaml -f service1.yaml
 ```{{execute}}
 
 Comprobamos lo que acabamos de desplegar:
