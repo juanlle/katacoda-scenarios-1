@@ -32,7 +32,6 @@
     },
     "intro": {
       "text": "intro.md",
-      "code": "set-env.sh",
       "courseData": "courseBase.sh",
       "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
     },
@@ -41,13 +40,12 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": " terminal-terminal",
     "showdashboard": true,
-    "dashboards": [{"name": "Prometheus", "port": 30090}, {"name": "Grafana", "port": 30092}, {"name": "Alert Manager", "port": 30091}],
     "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
   },
   "backend": {
     "port": 8080,
-    "imageid": "kubernetes"
+    "imageid": "minikube"
   }
 }
