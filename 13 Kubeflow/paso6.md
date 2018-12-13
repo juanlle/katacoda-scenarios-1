@@ -10,7 +10,7 @@ Para implementar un _notebook_, debemos iniciar un nuevo servidor. Kubeflow usa 
 
 El launcher del servidor le permite configurar opciones adicionales, como los requisitos de recursos. En este caso, acepte los valores predeterminados y haga clic en **Spawn** para iniciar el servidor. Ahora puede ver el contenido de la imagen de Docker que puede navegar, ampliar y trabajar con los Notebooks de Jupyter.
 
-De manera interna, esto generará un nuevo Pod de Kubernetes llamado *jupyter-admin* para administrar el servidor. Ver esto usando `kubectl get pods jupyter-admin` {{execute}}
+De manera interna, esto generará un nuevo Pod de Kubernetes llamado *jupyter-admin* para administrar el servidor. Ver esto usando `kubectl get pods jupyter-admin`{{execute}}
 
 ### Trabajando con Jupyter Notebook
 
