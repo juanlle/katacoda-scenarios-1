@@ -1,0 +1,44 @@
+{
+  "title": "Services",
+  "icon": "fa-kubernetes",
+  "description": "Creación y uso de Services",
+  "difficulty": "intermedio",
+  "time": "15 minutos",
+  "details": {
+    "steps": [{
+      "title": "1. Crear un servicio del tipo ClusterIP",
+      "text": "paso1.md"
+    },{
+      "title": "2. Crear un servicio del tipo NodePort",
+      "text": "paso2.md"
+    },{
+      "title": "3. Crear un servicio del tipo LoadBalancer",
+      "text": "paso3.md"
+    }],
+    "assets": {
+      "host01": [
+        {"file": "pod.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "service1.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "service2.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "service3.yaml", "target": "~/", "chmod": "+x"}
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "code": "start.sh",
+      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 30000}],
+    "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}
