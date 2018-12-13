@@ -1,0 +1,35 @@
+# Dependiendo de la solución DNS que hayamos instalado en nuestro clúster habilitaremos el exportador correspondiente
+coreDns:
+  enabled: false
+kubeDns:
+  enabled: true
+alertmanager:
+  service:
+    type: LoadBalancer
+  alertmanagerSpec:
+    storage:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 1Gi
+prometheus:
+  service:
+    type: LoadBalancer
+  prometheusSpec:
+    storage:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 1Gi
+grafana:
+  adminPassword: "AllYouNeedIsLove"
+  service:
+    type: LoadBalancer
+  persistence:
+    enabled: true
+    accessModes: ["ReadWriteOnce"]
+    size: 1Gi
