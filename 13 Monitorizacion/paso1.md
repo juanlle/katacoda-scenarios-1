@@ -2,56 +2,25 @@ Para la instalación de Prometheus usaremos el _chart_ oficial de Helm _promethe
 
 `cat default.conf`{{execute}}
 
-Debemos habilitar el almacenamiento persistente para todos los componentes de Prometheus y también tenemos que exponer Grafana con un _Ingress_. Este es le contenido del archivo de valores personalizados que pasaremos a Helm durante la instalación:
+Debemos habilitar el acceso desde el exterior usando servicios del tipo _NodePort_. Este es le contenido del archivo de valores personalizados que pasaremos a Helm durante la instalación:
 
 <pre class="file">
-# Dependiendo de la solución DNS que hayamos instalado en nuestro clúster habilitaremos el exportador correspondiente
-coreDns:
-  enabled: false
-kubeDns:
-  enabled: true
-
 alertmanager:
-  alertmanagerSpec:
-    storage:
-      volumeClaimTemplate:
-        spec:
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 10Gi
+  service:
+    type: NodePort
+    nodePort: 30091
 
 prometheus:
-  prometheusSpec:
-    storage:
-      volumeClaimTemplate:
-        spec:
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 10Gi
+  service:
+    type: NodePort
+    nodePort: 30090
 
 grafana:
-  adminPassword: "AllYouNeedIsLove"
-  ingress:
-    enabled: true
-    annotations:
-      kubernetes.io/ingress.class: nginx
-      kubernetes.io/tls-acme: "true"
-    hosts:
-      - grafana.test.akomljen.com
-    tls:
-      - secretName: grafana-tls
-        hosts:
-          - grafana.test.akomljen.com
-  persistence:
-    enabled: true
-    accessModes: ["ReadWriteOnce"]
-    size: 10Gi
+  service:
+    type: NodePort
+    nodePort: 30092
 
 </pre>
-
-En este ejercicio usaremos la configuración por defecto.
 
 ### Tarea
 

@@ -1,40 +1,14 @@
-# Dependiendo de la solución DNS que hayamos instalado en nuestro clúster habilitaremos el exportador correspondiente
-#coreDns:
-#  enabled: false
-#kubeDns:
-#  enabled: true
-#cat > custom-values.yaml <<EOF
 alertmanager:
   service:
-    type: LoadBalancer
-#  alertmanagerSpec:
-#    storage:
-#      volumeClaimTemplate:
-#        spec:
-#          accessModes: ["ReadWriteOnce"]
-#          resources:
-#            requests:
-#              storage: 1Gi
+    type: NodePort
+    nodePort: 30091
 
 prometheus:
   service:
-    type: LoadBalancer
-#  prometheusSpec:
-#    storage:
-#      volumeClaimTemplate:
-#        spec:
-#          accessModes: ["ReadWriteOnce"]
-#          resources:
-#            requests:
-#              storage: 1Gi
+    type: NodePort
+    nodePort: 30090
 
 grafana:
-#  adminPassword: "AllYouNeedIsLove"
   service:
-    type: LoadBalancer
-#  persistence:
-#    enabled: true
-#    accessModes: ["ReadWriteOnce"]
-#    size: 1Gi
-
-#EOF
+    type: NodePort
+    nodePort: 30092
