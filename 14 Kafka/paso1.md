@@ -5,7 +5,8 @@ Para la instalación de Kafka usaremos el _chart_ oficial de Helm _bitnami/kafka
 Primero debemos iniciar Helm y añadir el repositorio de charts de bitnami con:
 ```
 helm init && helm repo add bitnami https://charts.bitnami.com && helm repo update 
-```
+```{{execute}}
+
 y ya podemos desplegar Kafka con un único comando:
 
 ```
