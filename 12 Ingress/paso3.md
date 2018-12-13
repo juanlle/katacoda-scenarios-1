@@ -8,7 +8,7 @@ Las reglas se aplican a las solicitudes para el host _my.kubernetes.example_. Do
 
 A continuaci처n podemos apreciar c처mo la estructura de las URL de una aplicaci처n puede comportarse de manera independiente a c처mo se despliegan las aplicaciones.
 
-```yaml
+<pre class="yaml">
 - host: my.kubernetes.example
   http:
     paths:
@@ -23,8 +23,7 @@ A continuaci처n podemos apreciar c처mo la estructura de las URL de una aplicaci�
     - backend:
         serviceName: webapp3-svc
         servicePort: 80
-        
-```
+</pre>
 
 ### Tarea
 
