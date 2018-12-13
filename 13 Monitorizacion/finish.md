@@ -1,3 +1,3 @@
-¡Enhorabuena! Has desplegado un Ingress Controller exitosamente.
+¡Enhorabuena! Has desplegado el operador Prometheus exitosamente. Ya puedes monitorizar tu clúster de Kubernetes.
 
-Para más información visitar su sitio web en https://kubernetes.github.io/ingress-nginx/
+Para más información visitar su sitio web en https://github.com/coreos/prometheus-operator/tree/master/helm/prometheus-operator

@@ -28,3 +28,6 @@ https://akomljen.com/get-kubernetes-cluster-metrics-with-prometheus-in-5-minutes
 
 https://itnext.io/kubernetes-monitoring-with-prometheus-in-15-minutes-8e54d1de2e13
 
+https://kubeapps.com/
+
+https://github.com/bitnami/charts
