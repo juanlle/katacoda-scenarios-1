@@ -1,0 +1,53 @@
+{
+  "pathwayTitle": "",
+  "title": "Despliegue de Kafka",
+  "icon": "fa-kubernetes",
+  "difficulty": "fácil",
+  "time": "10 minutos",
+  "description": "Aprenda cómo desplegar Kafka en Kubernetes",
+  "details": {
+    "steps": [
+      {
+        "title": "1. Despliegue de Kafka",
+        "text": "paso1.md"
+      },
+      {
+        "title": "2. Prometheus",
+        "text": "paso2.md"
+      },
+      {
+        "title": "3. Alert Manager",
+        "text": "paso3.md"
+      },
+      {
+        "title": "4. Grafana",
+        "text": "paso4.md"
+      }
+    ],
+    "assets": {
+      "host01": [
+        { "file": "default.conf", "target": "~/", "chmod": "+x" },
+        { "file": "custom-values.yaml", "target": "~/", "chmod": "+x" }
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "courseBase.sh",
+      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Prometheus", "port": 30090}, {"name": "Grafana", "port": 30092}, {"name": "Alert Manager", "port": 30091}],
+    "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+  },
+  "backend": {
+    "port": 8080,
+    "imageid": "kubernetes"
+  }
+}
