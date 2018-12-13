@@ -9,6 +9,7 @@
     "steps": [
       {
         "title": "1. Creación del despliegue",
+        "code": "set-env.sh",
         "text": "paso1.md"
       },
       {
@@ -45,7 +46,6 @@
     },
     "intro": {
       "text": "intro.md",
-      "code": "set-env.sh",
       "courseData": "courseBase.sh",
       "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
     },
