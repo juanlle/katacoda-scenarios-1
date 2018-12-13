@@ -13,8 +13,18 @@ https://github.com/katacoda-scenarios/kubernetes-scenarios/blob/master/getting-s
 
 
 https://github.com/wardviaene/kubernetes-course
+
 https://cloudcraft.co/view/27ca12f3-0c25-4a9c-a71a-e7eac7ba36d0?key=gHUapwv_CQcF-YzezEl-rw&interactive=true&embed=true
+
 https://github.com/katacoda-scenarios/prometheus-scenarios
+
 https://github.com/katacoda-scenarios/kubeflow-scenarios
+
 https://github.com/katacoda/scenario-examples
+
 https://github.com/katacoda-scenarios
+
+https://akomljen.com/get-kubernetes-cluster-metrics-with-prometheus-in-5-minutes/
+
+https://itnext.io/kubernetes-monitoring-with-prometheus-in-15-minutes-8e54d1de2e13
+
