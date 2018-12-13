@@ -40,7 +40,7 @@
     }
   },
   "environment": {
-    "uilayout": " terminal-terminal",
+    "uilayout": "terminal-terminal",
     "showdashboard": true,
     "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
   },
