@@ -17,7 +17,8 @@
     }],
     "assets": {
       "host01": [
-        {"file": "pod.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "pod1.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "pod2.yaml", "target": "~/", "chmod": "+x"},
         {"file": "service1.yaml", "target": "~/", "chmod": "+x"},
         {"file": "service2.yaml", "target": "~/", "chmod": "+x"},
         {"file": "service3.yaml", "target": "~/", "chmod": "+x"}

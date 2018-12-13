@@ -5,7 +5,13 @@ metadata:
 spec:
   selector:
     app: nginx # Pod al que enrutará este servicio
+  type: LoadBalancer
   ports:
     - name: http
       protocol: TCP
       port: 80
+      targetPort: http # nombre del puerto en el pod
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: https
