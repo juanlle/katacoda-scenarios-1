@@ -10,7 +10,7 @@ helm init && helm repo add bitnami https://charts.bitnami.com && helm repo updat
 y ya podemos desplegar Kafka con un único comando:
 
 ```
-helm install bitnami/kafka --name orange-kafka --set service.type=LoadBalancer,persistence.enabled=false
+helm install bitnami/kafka --name orange-kafka --set persistence.enabled=false
 ```{{execute}}
 
 Podemos ver el estado con `kubectl get pods`{{execute}}
