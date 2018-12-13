@@ -12,24 +12,18 @@
         "text": "paso1.md"
       },
       {
-        "title": "2. Prometheus",
+        "title": "2. Creación de un topic",
         "text": "paso2.md"
       },
       {
-        "title": "3. Alert Manager",
+        "title": "3. Iniciar un producer",
         "text": "paso3.md"
       },
       {
-        "title": "4. Grafana",
+        "title": "4. Iniciar un consumer",
         "text": "paso4.md"
       }
     ],
-    "assets": {
-      "host01": [
-        { "file": "default.conf", "target": "~/", "chmod": "+x" },
-        { "file": "custom-values.yaml", "target": "~/", "chmod": "+x" }
-      ]
-    },
     "intro": {
       "text": "intro.md",
       "code": "set-env.sh",
