@@ -10,10 +10,10 @@ spec:
     app: nginx # Pod al que enrutará este servicio
   type: NodePort
   ports:
-    name: http
-    protocol: TCP
-    port: 8080
-    targetPort: 80
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 80
 </pre>
 
 Ahora desplegamos el servicio que acabamos de crear:
@@ -31,8 +31,8 @@ kubectl get svc
 Anotamos los dos puertos de nuestro servicio. De nuevo accedemos al servicio `nginx-service` a traves de su `CLUSTER_IP` y puerto con:
 
 ```
-export SERVICE_IP=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.clusterIP}")
-curl -v $SERVICE_IP:8080
+export CLUSTER_IP=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.clusterIP}")
+curl -v $CLUSTER_IP:8080
 ```{{execute}}
 
 Ahora obtenemos la dirección IP del cluster con el comando:
@@ -44,5 +44,6 @@ kubectl cluster-info
 Si probamos acceder a la IP que acabamos de obtener a través del segundo puerto de nuestro servicio, veremos que también accedemos al pod:
 
 ```
-curl -v $SERVICE_IP:8080
+export NODE_PORT=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.ports[0].nodePort}")
+curl -v [[HOST_IP]]:$NODE_PORT
 ```{{execute}}
