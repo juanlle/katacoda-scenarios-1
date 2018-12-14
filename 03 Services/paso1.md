@@ -14,7 +14,9 @@ spec:
       ports:
       - containerPort: 80
 </pre>
+
 y un servicio `service1.yaml`
+
 <pre class="file">
 kind: Service
 apiVersion: v1
@@ -46,7 +48,8 @@ kubectl get svc
 
 Una vez se ha desplegado, podemos acceder al servicio `nginx-service` a traves de su `CLUSTER_IP` y puerto con:
 ```
-curl -v [[HOST_IP]]:80
+export SERVICE_IP1=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.clusterIP}")
+curl -v $SERVICE_IP1:80
 ```{{execute}}
 
 Y veremos por pantalla el html que devuelve el pod `nginx`
@@ -65,5 +68,5 @@ kubectl delete svc nginx-service
 ```{{execute}}
 Si volvieramos a ejecutar el comando curl anterior, veríamos que ya no tenemos acceso al pod.
 ```
-curl -v [[HOST_IP]]:80
+curl -v $SERVICE_IP1:80
 ```{{execute}}
