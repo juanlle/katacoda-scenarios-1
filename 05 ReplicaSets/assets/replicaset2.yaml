@@ -1,19 +1,36 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicaSet
 metadata:
-  name: nginx-deployment
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
 spec:
+  # modificar el número de replicas a elección
+  replicas: 3
   selector:
     matchLabels:
-      app: nginx
-  replicas: 2
+      tier: frontend
+    matchExpressions:
+      - {key: tier, operator: In, values: [frontend]}
   template:
     metadata:
       labels:
-        app: nginx
+        app: guestbook
+        tier: frontend
     spec:
       containers:
-        - name: nginx
-          image: nginx:1.8 # Actualizamos la versión de nginx de 1.7.9 a 1.8
+        - name: php-redis
+          image: gcr.io/google_samples/gb-frontend:v3
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          env:
+            - name: GET_HOSTS_FROM
+              value: dns
           ports:
             - containerPort: 80
+          readinessProbe:
+            httpGet:
+              port: 80

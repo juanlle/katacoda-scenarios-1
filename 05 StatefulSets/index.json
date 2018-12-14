@@ -1,0 +1,44 @@
+{
+  "title": "StatefulSets",
+  "icon": "fa-kubernetes",
+  "description": "Creación y uso de StatefulSets",
+  "difficulty": "intermedio",
+  "time": "15 minutos",
+  "details": {
+    "steps": [{
+      "title": "1. Crear un StatefulSet",
+      "text": "paso1.md"
+    },{
+      "title": "2. Aumentando el escalado (Scaling Up)",
+      "text": "paso2.md"
+    },{
+      "title": "3. Disminuyendo el escalado (Scaling Down)",
+      "text": "paso3.md"
+    },{
+      "title": "4. Eliminación no en cascada",
+      "text": "paso4.md"
+    }],
+    "assets": {
+      "host01": [
+        {"file": "nginx.yaml", "target": "~/", "chmod": "+x"}
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "code": "start.sh",
+      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 30000}],
+    "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}
