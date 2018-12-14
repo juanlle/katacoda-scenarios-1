@@ -13,7 +13,7 @@ watch kubectl get pods
 eliminamos un solo pod y comprobamos de nuevo como se mantienen los demás y no se crean o reinician nuevos
 
 ```
-kubectl delete pod web-0 && watch kubectl get pods
+kubectl delete pod web-0 & watch kubectl get pods
 ```{{execute}}
 
 ya podemos eliminar los demás
