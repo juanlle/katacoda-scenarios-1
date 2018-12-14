@@ -1,5 +1,5 @@
 {
-  "title": "Services",
+  "title": "Deployments",
   "icon": "fa-kubernetes",
   "description": "Creación y uso de Deployments",
   "difficulty": "intermedio",
