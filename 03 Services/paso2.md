@@ -47,3 +47,13 @@ Si probamos acceder a la IP que acabamos de obtener a través del segundo puerto
 export NODE_PORT=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.ports[0].nodePort}")
 curl -v [[HOST_IP]]:$NODE_PORT
 ```{{execute}}
+
+Ahora borramos el servicio del cluster:
+```
+kubectl delete svc nginx-service
+```{{execute}}
+
+y el pod:
+```
+kubectl delete pod nginx
+```{{execute}}
