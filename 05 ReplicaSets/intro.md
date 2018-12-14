@@ -1,0 +1,1 @@
+En este ejercicio crearemos varios replicasets y veremos sus particularidades.

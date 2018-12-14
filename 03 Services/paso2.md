@@ -1,35 +1,59 @@
-Se puede actualizar un deployment si desplegamos un nuevo YAML con:
+En este caso usaremos el mismo pod creado previamente, y un nuevo servicio `service2.yaml` con el contenido:
 
 <pre class="file">
-apiVersion: apps/v1
-kind: Deployment
+kind: Service
+apiVersion: v1
 metadata:
-  name: nginx-deployment
+  name: nginx-service
 spec:
   selector:
-    matchLabels:
-      app: nginx
-  replicas: 2
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.8 # Actualizamos la versión de nginx de 1.7.9 a 1.8
-        ports:
-        - containerPort: 80
+    app: nginx # Pod al que enrutará este servicio
+  type: NodePort
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 80
 </pre>
 
-Para actualizar el deployment:
+Ahora desplegamos el servicio que acabamos de crear:
 
 ```
-kubectl apply -f deployment2.yaml
+kubectl apply -f service2.yaml
 ```{{execute}}
 
-Y comprobamos como el deployment crea nuevos pods con los nuevos nombres y elimina los antiguos:
+Comprobamos el servicio que acabamos de desplegar:
 
 ```
-watch kubectl get pods -l app=nginx
+kubectl get svc
+```{{execute}}
+
+Anotamos los dos puertos de nuestro servicio. De nuevo accedemos al servicio `nginx-service` a traves de su `CLUSTER_IP` y puerto con:
+
+```
+export CLUSTER_IP=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.clusterIP}")
+curl -v $CLUSTER_IP:8080
+```{{execute}}
+
+Ahora obtenemos la dirección IP del cluster con el comando:
+
+```
+kubectl cluster-info
+```{{execute}}
+
+Si probamos acceder a la IP que acabamos de obtener a través del segundo puerto de nuestro servicio, veremos que también accedemos al pod:
+
+```
+export NODE_PORT=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.ports[0].nodePort}")
+curl -v [[HOST_IP]]:$NODE_PORT
+```{{execute}}
+
+Ahora borramos el servicio del cluster:
+```
+kubectl delete svc nginx-service
+```{{execute}}
+
+y el pod:
+```
+kubectl delete pod nginx
 ```{{execute}}

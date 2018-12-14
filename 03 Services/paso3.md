@@ -1,35 +1,83 @@
-Podemos aumentar el número de réplicas en nuestro deployment, si modificamos el valor y aplicamos el YAML. En nuestro caso aumentaremos el valor de `replicas` a 4:
+Vamos un nuevo pod con el contenido:
 
 <pre class="file">
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: nginx-deployment
+  name: nginx
+  labels:
+    app: nginx
 spec:
-  selector:
-    matchLabels:
-      app: nginx
-  replicas: 4 # Update the replicas from 2 to 4
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.8
-        ports:
-        - containerPort: 80
+  containers:
+    - name: nginx-container
+      image: nginx:1.7.9
+      ports:
+      # Ahora los nombramos
+      - name: http
+        hostPort: 80
+        containerPort: 80
+      - name: https
+        hostPort: 443
+        containerPort: 80
 </pre>
 
-Actualizamos
+y otro servicio:
+
+<pre class="file">
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx # Pod al que enrutará este servicio
+  type: LoadBalancer
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: http # nombre del puerto en el pod
+  - name: https
+    protocol: TCP
+    port: 443
+    targetPort: https
+</pre>
+
+desplegamos ambos objetos:
 
 ```
-kubectl apply -f deployment3.yaml
+kubectl apply -f service3.yaml -f pod2.yaml
 ```{{execute}}
 
-y comprobamos
+Comprobamos lo que acabamos de desplegar:
 
 ```
-watch kubectl get pods -l app=nginx
+kubectl get svc && kubectl get pod
+```{{execute}}
+
+De nuevo accedemos al servicio `nginx-service` a traves de su `CLUSTER_IP` y los dos puertos definidos en el servicio con:
+
+```
+export CLUSTER_IP=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.clusterIP}")
+curl -v $CLUSTER_IP:80
+```{{execute}}
+
+ y
+ 
+ ```
+curl -v $CLUSTER_IP:443
+ ```{{execute}}
+
+Para exponer los puntos de acceso `ENDPOINTS` en minikube, ejecutar el comando:
+
+```
+minikube service nginx-service
+```{{execute}}
+
+Y tendremos acceso desde el exterior. 
+
+Ya podemos limpiar nuestro cluster:
+
+```
+kubectl delete -f service3.yaml -f pod2.yaml
 ```{{execute}}
