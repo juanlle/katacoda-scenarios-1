@@ -1,72 +1,55 @@
-En este caso necesitaremos crear un pod además del servicio. Un archivo `pod1.yaml` con el siguiente contenido:
+Veamos el archivo `deployment1.yaml` con el siguiente contenido:
 
 <pre class="file">
-apiVersion: v1
-kind: Pod
-metadata:Con el editor de texto o directamente desde el terminal, crear u
-  name: nginx
-  labels:
-    app: nginx
-spec:
-  containers:
-    - name: nginx-container
-      image: nginx:1.7.9
-      ports:
-      - containerPort: 80
-</pre>
-
-y un servicio `service1.yaml`
-
-<pre class="file">
-kind: Service
-apiVersion: v1
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: nginx-service
+  name: nginx-deployment
 spec:
   selector:
-    app: nginx # Pod al que enrutará este servicio
-  ports:
-  - name: http
-    protocol: TCP
-    port: 80
+    matchLabels:
+      app: nginx
+  replicas: 2 # le dice al deployment que ejecute 2 pods como se define en template
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
 </pre>
 
-Ahora desplegamos el pod y el servicio que acabamos de mostrar:
+Ahora desplegamos el deployment que acabamos de mostrar:
 
 ```
-kubectl create -f pod1.yaml -f service1.yaml
+kubectl create -f deployment1.yaml  --save-config
 ```{{execute}}
 
-Comprobamos lo que acabamos de desplegar:
+Comprobamos el despliegue por terminal:
+
 ```
-kubectl get pods
-```{{execute}}
-y
-```
-kubectl get svc
+watch kubectl get deployment
 ```{{execute}}
 
-Una vez se ha desplegado, podemos acceder al servicio `nginx-service` a traves de su `CLUSTER_IP` y puerto con:
+Cuando este desplegado correctamente (2 réplicas disponibles), para ver la información del deployment ejecutamos:
+
 ```
-export CLUSTER_IP=$(kubectl get svc --namespace default nginx-service -o jsonpath="{.spec.clusterIP}")
-curl -v $CLUSTER_IP:80
+kubectl describe deployment nginx-deployment
 ```{{execute}}
 
-Y veremos por pantalla el html que devuelve el pod `nginx`
+Listamos los pods creados por nuestro deployment
 
-Comprobemos nuestro servicio en detalle:
 ```
-kubectl describe svc nginx-service
+kubectl get pods -l app=nginx
 ```{{execute}}
-o también:
+
+Y mostramos la información de un pod:
+
 ```
-kubectl get svc nginx-service -o yaml
-```{{execute}}
-Ahora borramos el servicio del cluster:
+kubectl describe pod <nombre_del_pod>
 ```
-kubectl delete svc nginx-service
-```{{execute}}
-Si volvieramos a ejecutar el comando curl anterior, veríamos que ya no tenemos acceso al pod.
-```
-curl -v $CLUSTER_IP:80
-```{{execute}}
+
+donde `<nombre_del_pod>` es el nombre de uno de nuestros pods.

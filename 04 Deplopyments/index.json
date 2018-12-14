@@ -1,0 +1,46 @@
+{
+  "title": "Services",
+  "icon": "fa-kubernetes",
+  "description": "Creación y uso de Deployments",
+  "difficulty": "intermedio",
+  "time": "15 minutos",
+  "details": {
+    "steps": [{
+      "title": "1. Mi primer deployment",
+      "text": "paso1.md"
+    },{
+      "title": "2. Actualización del deployment",
+      "text": "paso2.md"
+    },{
+      "title": "3. Escalado del deployment",
+      "text": "paso3.md"
+    },{
+      "title": "4. Eliminación del deployment",
+      "text": "paso4.md"
+    }],
+    "assets": {
+      "host01": [
+        {"file": "deployment1.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "deployment2.yaml", "target": "~/", "chmod": "+x"},
+        {"file": "deployment3.yaml", "target": "~/", "chmod": "+x"}
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "code": "start.sh",
+      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 30000}],
+    "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}
