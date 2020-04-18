@@ -34,7 +34,7 @@
     "intro": {
       "text": "intro.md",
       "code": "start.sh",
-      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+      "credits": ""
     },
     "finish": {
       "text": "finish.md"
