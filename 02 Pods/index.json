@@ -34,7 +34,7 @@
     "intro": {
       "text": "intro.md",
       "code": "start.sh",
-      "credits": ""
+      "credits": "by Juanlle"
     },
     "finish": {
       "text": "finish.md"
