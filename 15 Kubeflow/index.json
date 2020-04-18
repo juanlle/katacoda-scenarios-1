@@ -18,7 +18,7 @@
       "text": "intro.md",
       "code": "foreground-init.sh",
       "courseData": "env-init.sh",
-      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+      "credits": "by Juanlle"
     },
     "finish": {
       "text": "finish.md"
