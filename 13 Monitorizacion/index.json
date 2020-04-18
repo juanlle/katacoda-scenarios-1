@@ -34,7 +34,7 @@
       "text": "intro.md",
       "code": "set-env.sh",
       "courseData": "courseBase.sh",
-      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+      "credits": "by Juanlle
     },
     "finish": {
       "text": "finish.md"
